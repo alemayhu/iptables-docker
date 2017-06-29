@@ -1,5 +1,7 @@
 FROM ubuntu
 
+LABEL x="0"
+
 ENV IPTABLES_INSTALLER /tmp/Scripts/nft-dev
 
 RUN apt-get update && \
