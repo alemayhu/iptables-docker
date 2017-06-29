@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL x="0"
+LABEL x="1"
 
 ENV IPTABLES_INSTALLER /tmp/Scripts/nft-dev
 
