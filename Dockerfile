@@ -10,6 +10,7 @@ git clone https://github.com/scanf/Scripts /tmp/Scripts && \
 $IPTABLES_INSTALLER prepare && \
 $IPTABLES_INSTALLER  && \
 $IPTABLES_INSTALLER  && \
+$IPTABLES_INSTALLER prepare remove && \
 make -C $HOME/src/netfilter.org/*/ clean && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* $HOME/src
