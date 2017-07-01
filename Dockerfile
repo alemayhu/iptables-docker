@@ -17,5 +17,9 @@ apt-get purge -y texlive-pictures-doc texlive-pstricks-doc libgl1-mesa-dri \
 texlive-latex-base-doc texlive-base texlive-latex-recommended-doc libllvm3.8 \
 texlive-binaries texlive-pstricks lmodern libicu55 texlive-latex-recommended \
 gcc-5 git g++-5 cpp-5 libperl5.22 tex-gyre texlive-fonts-recommended && \
+apt-get purge -y $(aptitude search '~i!~M!~prequired!~pimportant!~R~prequired!~R~R~prequired!~R~pimportant!~R~R~pimportant' | awk '{print $2}') && \
+apt-get install -y libjansson4 && \
+apt-get autoclean -y && \
+apt-get autoremove -y && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* $HOME/src
