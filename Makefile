@@ -9,3 +9,5 @@ docker_deploy: docker docker_push
 	echo "Pushed to docker, https://hub.docker.com/r/${project}"
 docker_push:
 	docker push ${project}
+docker_shell:
+	docker run -t -i alemayhu/iptables-docker /bin/bash
